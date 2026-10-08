@@ -1,0 +1,930 @@
+{
+  "info": {
+    "_postman_id": "b636a3e5-e3da-4d15-8655-cfd5c46027f5",
+    "name": "API POS Cafetería - Módulos del Sistema",
+    "description": "Colección completa de pruebas para los módulos de Productos, Usuario, Modificador, Venta, Detalle de Venta y Receta.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51935965",
+    "_collection_link": "https://go.postman.co/collection/51935965-b636a3e5-e3da-4d15-8655-cfd5c46027f5?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "1. Módulo Productos",
+      "item": [
+        {
+          "name": "GET - Obtener todos los productos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/productos",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "productos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET - Obtener producto por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/productos/1",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "productos",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST - Crear producto",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Café Americano\",\n  \"categoria\": \"Bebidas\",\n  \"precio\": 45.00,\n  \"stock\": 100,\n  \"icono\": \"fa-mug-hot\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/productos",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "productos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT - Actualizar producto",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Café Americano Grande\",\n  \"categoria\": \"Bebidas\",\n  \"precio\": 55.00,\n  \"stock\": 90,\n  \"icono\": \"fa-mug-hot\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/productos/1",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "productos",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE - Eliminar producto",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/productos/1",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "productos",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "2. Módulo Usuarios",
+      "item": [
+        {
+          "name": "GET - Obtener todos los usuarios",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/usuarios",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "usuarios"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET - Obtener usuario por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/usuarios/1",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "usuarios",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST - Crear usuario",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Carlos Mendoza\",\n  \"email\": \"carlos.cajero@cafeteria.com\",\n  \"rol\": \"cajero\",\n  \"password\": \"ClaveSegura123!\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/usuarios",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "usuarios"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT - Actualizar usuario",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Carlos Mendoza V.\",\n  \"email\": \"carlos.mendoza@cafeteria.com\",\n  \"rol\": \"administrador\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/usuarios/1",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "usuarios",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE - Eliminar usuario",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/usuarios/1",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "usuarios",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "3. Módulo Modificadores",
+      "item": [
+        {
+          "name": "GET - Obtener todos los modificadores",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/modificadores",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "modificadores"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET - Obtener modificador por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/modificadores/1",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "modificadores",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST - Crear modificador",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Leche de Almendras\",\n  \"tipo\": \"Lácteos\",\n  \"precio_extra\": 15.00\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/modificadores",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "modificadores"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT - Actualizar modificador",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Leche de Almendras Orgánica\",\n  \"tipo\": \"Lácteos\",\n  \"precio_extra\": 18.00\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/modificadores/1",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "modificadores",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE - Eliminar modificador",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/modificadores/1",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "modificadores",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "4. Módulo Ventas",
+      "item": [
+        {
+          "name": "GET - Obtener todas las ventas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/ventas",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "ventas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST - Registrar nueva venta",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id_usuario\": 1,\n  \"total\": 137.50,\n  \"monto_pagado\": 150.00\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/ventas",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "ventas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET - Obtener venta por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/ventas/1",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "ventas",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT - Actualizar venta",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id_usuario\": 1,\n  \"total\": 137.50,\n  \"monto_pagado\": 150.00\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/ventas/1",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "ventas",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE - Eliminar venta",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/ventas/1",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "ventas",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "5. Módulo Detalle de Venta",
+      "item": [
+        {
+          "name": "GET - Obtener todos los detalles de venta",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/detalle_ventas",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "detalle_ventas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET - Obtener detalle de venta por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/detalle_ventas/1",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "detalle_ventas",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST - Agregar detalle manual a venta",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id_venta\": 1,\n  \"id_producto\": 2,\n  \"cantidad\": 2,\n  \"precio_unitario\": 72.00\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/detalle_ventas",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "detalle_ventas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT - Actualizar detalle de venta",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id_venta\": 1,\n  \"id_producto\": 2,\n  \"cantidad\": 3,\n  \"precio_unitario\": 72.00\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/detalle_ventas/1",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "detalle_ventas",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE - Eliminar detalle de venta",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/detalle_ventas/1",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "detalle_ventas",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "6. Módulo Recetas (BOM - Explosión de Insumos)",
+      "item": [
+        {
+          "name": "GET - Obtener todas las recetas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/recetas",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "recetas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET - Obtener receta por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/recetas/1",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "recetas",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST - Asociar insumo a producto (Crear Receta)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id_producto\": 2,\n  \"id_insumo\": 1,\n  \"cantidad_requerida\": 18.00\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/recetas",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "recetas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT - Actualizar receta",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id_producto\": 2,\n  \"id_insumo\": 1,\n  \"cantidad_requerida\": 20.00\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/recetas/1",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "recetas",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE - Eliminar ingrediente de receta",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://40.233.8.207/api/v1/recetas/1",
+              "protocol": "http",
+              "host": [
+                "40",
+                "233",
+                "8",
+                "207"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "recetas",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
